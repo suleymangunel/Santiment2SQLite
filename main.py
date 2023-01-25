@@ -74,7 +74,7 @@ def task():
 
 
 if __name__ == '__main__':
-    schedule.every(5).seconds.do(task)
+    schedule.every(1).hours.do(task)
     while True:
         time_to_next_job = schedule.idle_seconds()
         if time_to_next_job > 1:
